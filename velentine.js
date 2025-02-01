@@ -1,0 +1,1 @@
+document.querySelector('.open-letter-btn').addEventListener('click', function() {

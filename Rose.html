@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day, Mahima Ji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Parisienne', cursive;
+            margin: 0;
+            padding: 0;
+            color: #3b0a45;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.7), rgba(255, 105, 180, 0.8));
+            background-image: url('photo-1518621736915-f3b1c41bfd00.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            padding: 10px 0;
+            font-size: 30px;
+            color: #e91e63;
+            text-shadow: 2px 2px 10px rgba(255, 105, 180, 0.6);
+        }
+        .intro {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+            color: #3b0a45;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quotes {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #e91e63;
+            font-style: italic;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s forwards;
+            animation-delay: 2s;
+        }
+        .rose-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .rose {
+            width: 120px;
+            height: 100px;
+            margin: 0 20px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 2s forwards;
+        }
+        .rose img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .rose img:hover {
+            transform: scale(1.1);
+        }
+        .rose:nth-child(1) {
+            animation-delay: 2s;
+        }
+        .rose:nth-child(2) {
+            animation-delay: 2.2s;
+        }
+        .rose:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+        .message {
+            text-align: center;
+            font-size: 20px;
+            color: #e91e63;
+            margin-top: 20px;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .message.active {
+            display: block;
+            animation: fadeInMessage 1s forwards;
+        }
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+            color: #3b0a45;
+        }
+        footer a {
+            text-decoration: none;
+            color: #e91e63;
+            font-weight: bold;
+        }
+        /* Rose Petal Animation */
+        .petals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('https://www.pngall.com/wp-content/uploads/5/Red-Rose-PNG.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall 5s infinite linear;
+        }
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 0.8;
+                transform: rotate(0deg);
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+                transform: rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio Section (Tum Hi Ho) -->
+    <audio autoplay loop>
+        <source url("tum-hi-ho-aashiqui-2-musiclinda-com-1074.mp3") type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h1>Happy Rose Day, <br>My Rosey wife Mahima Ji🌹</br> </h1>
+    <div class="intro">With every rose, I send you all my love and affection. You're the most precious part of my life. 💖</div>
+
+    <!-- Rose Day Quotes -->
+    <div class="quotes">
+        <p>"A rose is a symbol of love, and every petal expresses my feelings for you.🌹"</p>
+        <p>"On this Rose Day, I promise to cherish you, just as a rose cherishes the sun. 🌞"</p>
+        <p>"Like a rose, our love will bloom forever. 🌸"</p>
+    </div>
+
+    <div class="rose-container">
+        <div class="rose" onclick="showMessage(1)">
+            <img src="velvety-red-rose-romance_4.jpg" alt="Red Rose">
+        </div>
+        <div class="rose" onclick="showMessage(2)">
+            <img src="944A4BB6-8A2E-4375-8050-914591903785_900x.jpg" alt="Pink Rose">
+        </div>
+        <div class="rose" onclick="showMessage(3)">
+            <img src="A5625320-A7F3-4E46-A853-7530BA908D80-scaled.jpeg" alt="Yellow Rose">
+        </div>
+    </div>
+
+    <div class="message" id="message1">This red rose symbolizes my deep love for you, Mahima Ji! 🌹</div>
+    <div class="message" id="message2">This pink rose expresses my admiration and appreciation for you! 🌸</div>
+    <div class="message" id="message3">This yellow rose represents the joy and happiness you bring to my life! 🌼</div>
+
+    <footer>
+        <p>With all my love, Satyam</p>
+        <p><a href="https://youtu.be/Umqb9KENgmk?si=tZ3MJ550YebL4gw2" target="_blank">Listen to "Tum Hi Ho" – Our Song 🎶</a></p>
+    </footer>
+
+    <!-- Rose Petal Animation -->
+    <div class="petals">
+        <div class="petal" style="left: 20%; animation-duration: 5s; animation-delay: 0s;"></div>
+        <div class="petal" style="left: 50%; animation-duration: 6s; animation-delay: 1s;"></div>
+        <div class="petal" style="left: 80%; animation-duration: 5.5s; animation-delay: 2s;"></div>
+        <div class="petal" style="left: 30%; animation-duration: 7s; animation-delay: 3s;"></div>
+        <div class="petal" style="left: 70%; animation-duration: 6s; animation-delay: 4s;"></div>
+    </div>
+
+    <script>
+        function showMessage(roseNumber) {
+            const messages = document.querySelectorAll('.message');
+            messages.forEach(message => message.classList.remove('active'));
+
+            const message = document.getElementById('message' + roseNumber);
+            message.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
