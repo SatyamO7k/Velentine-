@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Love Letter</title>
+    <style>
+    
+
+        body {
+            background: linear-gradient(to right, #ff99cc, #ff66b3);
+            font-family:  Sans-Serif, Courier New;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-align: center;
+            
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 160vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image:url('/img_20241227_162601.jpg') 
+        }
+
+        /* Love Letter Animation */
+        .love-letter {
+            background-color: #fff0f5;
+            width: 300px;
+            height: 550px;
+            border: 2px solid #ff66b3;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            top: -100px;
+            transform: scale(0.7);
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        @keyframes slideIn {
+            0% {
+                top: -300px;
+                transform: scale(0.5);
+            }
+            100% {
+                top: -100px;
+                transform: scale(1);
+            }
+        }
+
+        /* Love Letter Heading */
+        .letter-heading {
+            font-size: 20px;
+            color: #ff0066;
+            font-famiy: 'Dancing Scrit', cursive;
+            margin-bottom: 10px;
+        }
+
+        /* Love Message Text */
+        .message {
+            font-size: 1.2em;
+            color: #ff3366;
+            line-height: 1.5;
+            font-family: 'Cursive', sans-serif;
+        }
+
+        /* Falling hearts animation */
+        .falling-heart {
+            position: absolute;
+            animation: fall 5s infinite linear;
+            font-size: 2.5em;
+            color: #ff3366;
+            z-index: -1;
+        }
+
+        .falling-heart:nth-child(1) {
+            left: 25%;
+            animation-duration: 4s;
+        }
+
+        .falling-heart:nth-child(2) {
+            left: 45%;
+            animation-duration: 6s;
+        }
+
+        .falling-heart:nth-child(3) {
+            left: 65%;
+            animation-duration: 5s;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                opacity: 0;
+            }
+        }
+
+        /* Sparkles Animation */
+        .sparkle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ff66b3;
+           
+            opacity: 0.9;
+            animation: sparkle 2s infinite ease-in-out;
+        }
+
+        @keyframes sparkle {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .sparkle:nth-child(1) {
+            top: 15%;
+            left: 10%;
+            width: 25px;
+            height: 25px;
+            animation-duration: 3s;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 30%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            animation-duration: 4s;
+        }
+
+        .sparkle:nth-child(3) {
+            top: 60%;
+            left: 75%;
+            width: 35px;
+            height: 35px;
+            animation-duration: 5s;
+        }
+
+        /* Button to open letter */
+        .open-letter-btn {
+            background-color: #ff66b3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            border: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .open-letter-btn:hover {
+            background-color: #ff3366;
+            transform: scale(1.1);
+        }
+
+    </style>
+   
+    
+</head>
+<body>
+
+<!-- Love Letter & Interactive Elements -->
+<div class="container">
+    <div class="love-letter">
+        <div class="letter-heading"> <h2><b><u><i> To My Georgios Wife Mahima🎀❤️ </i></u></b></h2></div>
+        <div class="message">
+            <p>From the moment we met, my heart found its Home🏠.</p>
+            <p>With every passing day, my love for you grows 📈stronger👩‍❤️‍💋‍👨.</p>
+            <p>Will you be mine forever ∞? ❤️</p>
+            <p>here, our wonderful Family👨‍👩‍👦‍👦 ❤️:<br></p>
+            <h2><b><u><i> 
+            Shruti 🤱, Shrutika 🧑‍🍼, Vartika 👰, Shreyansh 🤵
+            </i></u></b></h2>
+            <p>From - Satyam ❤️ Mahima (Dudu♥Bubu)</p>
+        </div>
+    </div>
+    
+    <!-- Link to open the letter -->
+    <a href="week.html" class="open-letter-btn">Open Our Future My Love👰</a>
+</div>
+
+<!-- Falling Hearts -->
+<div class="falling-heart">❤️</div>
+<div class="falling-heart">❤️</div>
+<div class="falling-heart">❤️</div>
+
+<!-- Sparkles -->
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+
+<script>
+    document.querySelector('.open-letter-btn').addEventListener('click', function() {
+        document.querySelector('.love-letter').style.transform = 'scale(1)';
+        document.querySelector('.love-letter').style.transition = 'all 1s ease';
+        document.querySelector('.message').style.display = 'block';
+    });
+    
+    const container = document.getElementById('container');
+container.style.backgroundImage = "url('img_20241227_162601.jpg')"; 
+
+</script>
+
+</body>
+</html>
